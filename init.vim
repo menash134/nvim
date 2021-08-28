@@ -72,6 +72,7 @@ nnoremap <leader>bl :blast<CR>
 "Other
 nnoremap <leader><CR> :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>fe :Telescope file_browser<CR>
+nnoremap <leader>fr :Telescope live_grep<CR>
 nnoremap <leader>f :call CocAction('format')<CR>
 
 "TagbarToggle
