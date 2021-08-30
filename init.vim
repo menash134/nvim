@@ -45,9 +45,9 @@ let g:asyncrun_open=6
 let g:asyncrun_bell=1
 let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_lists = [
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'files',     'header': ['   Files']            },
           \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-          \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
 
@@ -85,8 +85,6 @@ nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 highlight NvimTreeFolderName guifg=pink
 highlight NvimTreeFolderIcon guifg=green
-
-
 
 "ToggleTerm 
 "nnoremap <leader>tm <Cmd>exe v:count1 . "ToggleTerm"<CR>

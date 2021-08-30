@@ -4,15 +4,14 @@ require('telescope').setup{
       prompt_prefix = " ",
       mappings = {
           i = {
-            ["<c-a>"] = function() print(vim.inspect(action_state.get_selected_entry())) end 
+            ["<c-a>"] = function() print(vim.inspect(action_state.get_selected_entry())) end ,
+            ["<c-b>"] = require('telescope.actions').cycle_history_next,
+            ["<c-c>"] = require('telescope.actions').cycle_history_prev
           }        
       },
       file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz"},
       dynamic_preview_title =true,
-      path_display = function(opts,path)
-        local tail = require("telescope.utils").path_tail(path)
-        return string.format("%s (%s)", tail,path)
-      end,
+      path_display = {['shorten'] = 6}
     }
   }
 require('telescope').load_extension('fzf')
@@ -27,3 +26,10 @@ mappings.curr_buf = function()
   print("teej")
 end
 return mappings
+
+
+
+      --path_display = function(opts,path)
+        --local tail = require("telescope.utils").path_tail(path)
+        --return string.format("%s (%s)", tail,path)
+      --end,
