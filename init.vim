@@ -30,7 +30,7 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
-colorscheme xcodedarkhc
+colorscheme atom-dark-256
 set background =dark
 
 "==============================================================================
@@ -152,7 +152,7 @@ tnoremap <M-l> <c-\><c-n><c-w>l
 
 
 "cscope 
-map g<C-_> :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+map g<C-_> :vert scs find t <C-R>=expand("<cword>")<CR><CR>
 map s<C-_> :vert scs find 0 <C-R>=expand("<cword>")<CR><CR>
 "nmap <leader>_ :scs find s <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>g :scs find g <C-R>=expand("<cword>")<CR><CR>
@@ -166,7 +166,7 @@ map s<C-_> :vert scs find 0 <C-R>=expand("<cword>")<CR><CR>
 "
 
 "Telescope
-nnoremap <leader>fg <cmd>Telescope tags<cr>
+nnoremap <leader>fa <cmd>Telescope tags<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 "nnoremap <leader>fg <cmd>lua require('telescope.builtin').tags()<cr>
 autocmd StdinReadPre * let s:std
@@ -289,7 +289,8 @@ lua require("bashbunni")
 nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
 " nnoremap <C-_> :Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top <cr> 
 " nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending", prompt_position="top"})<cr>
-nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:source ~/.config/nvim/init.vim <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
+"nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:source ~/.config/nvim/init.vim <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
+nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <leader>ff :Telescope find_files <cr>
 
 "cscope add .cscope.out

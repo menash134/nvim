@@ -105,6 +105,7 @@ Plug 'fannheyward/telescope-coc.nvim'
 "devicons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'preservim/nerdtree'
 
 
 call plug#end()
