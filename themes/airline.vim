@@ -4,6 +4,7 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#grepper#enabled = 1
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1

@@ -102,6 +102,10 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'fannheyward/telescope-coc.nvim'
 
+"grep 
+"Plug 'mhinz/vim-grepper'
+Plug 'qalshidi/vim-bettergrep'
+
 "devicons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'

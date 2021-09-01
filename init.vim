@@ -32,6 +32,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 "Aesthetic
 colorscheme atom-dark-256
 set background =dark
+set grepprg=rg 
 
 "==============================================================================
 "key combos
@@ -80,11 +81,20 @@ nmap <F8> :TagbarToggle<CR>
 map <F7> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 
 "NvimTree 
-nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
-highlight NvimTreeFolderName guifg=pink
-highlight NvimTreeFolderIcon guifg=green
+"nnoremap <C-n> :NvimTreeToggle<CR>
+"nnoremap <leader>r :NvimTreeRefresh<CR>
+"nnoremap <leader>n :NvimTreeFindFile<CR>
+"highlight NvimTreeFolderName guifg=pink
+"highlight NvimTreeFolderIcon guifg=green
+
+
+"NERDTree 
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>r :NERDTreeRefreshRoot<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+
+"print 
+nnoremap <leader>pp  oprintk("%s:%d\r\n",__func__,__LINE__);<ESC>:w!<CR>
 
 "ToggleTerm 
 "nnoremap <leader>tm <Cmd>exe v:count1 . "ToggleTerm"<CR>
