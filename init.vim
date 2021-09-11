@@ -66,7 +66,8 @@ set encoding=UTF-8
 let mapleader = ";"
 
 "Navigate buffers
-nnoremap <leader>bn :bnext<CR>
+"nnoremap <leader>bn :bnext<CR>
+nnoremap <s-Tab> :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bf :bfirst<CR>
 nnoremap <leader>bl :blast<CR>
@@ -88,6 +89,10 @@ map <F7> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 "highlight NvimTreeFolderName guifg=pink
 "highlight NvimTreeFolderIcon guifg=green
 
+"MergeChange
+nnoremap <s-m>  <ESC>dp
+nnoremap <s-n>  <ESC>]c
+
 
 "NERDTree 
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -106,7 +111,7 @@ nmap <F2>  :2ToggleTerm direction=window<CR>
 nmap <F3>  <esc><Cmd>exe v:count1 . "3ToggleTerm direction=vertical"<CR>
 nnoremap <F6> :AsyncRun -mode=async -pos=right cc_ax_compile<cr>
 nnoremap <F9> :AsyncRun -mode=async -pos=right cc_checkout % <cr>
-nnoremap <leader>tu :AsyncRun -mode=async -pos=right cc_undo_checkout % <cr>
+nnoremap <leader>tu :AsyncRun -mode=async -pos=right cc_undo_co % <cr>
 nnoremap <leader>tc <cmd>ToggleTermCloseAll<cr>
 nnoremap <leader>to <cmd>ToggleTermOpenAll<cr>
 
@@ -175,7 +180,7 @@ map <leader>ps :vert scs find 0 <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>a :scs find a <C-R>=expand("<cword>")<CR><CR>
 "
-map <C-g> :Grep <C-R>=expand("<cword>")<CR> 
+map <C-g> :Grep <C-R>=expand("<cword>")<CR><Space> 
 "Telescope
 nnoremap <leader>fa <cmd>Telescope tags<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
