@@ -34,6 +34,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 colorscheme atom-dark-256
 set background =dark
 set grepprg=rg 
+highlight Normal guibg=#000000
 
 "==============================================================================
 "key combos
