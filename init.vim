@@ -32,9 +32,8 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
 colorscheme atom-dark-256
-set background =dark
+set background=dark
 set grepprg=rg 
-highlight Normal guibg=#000000
 
 "==============================================================================
 "key combos
@@ -115,6 +114,7 @@ nnoremap <F9> :AsyncRun -mode=async -pos=right cc_checkout % <cr>
 nnoremap <leader>tu :AsyncRun -mode=async -pos=right cc_undo_co % <cr>
 nnoremap <leader>tc <cmd>ToggleTermCloseAll<cr>
 nnoremap <leader>to <cmd>ToggleTermOpenAll<cr>
+nnoremap <F10> :cclose<cr>
 
 "lua << EOF
 "local noremap_opts = { noremap = true, silent = true }
