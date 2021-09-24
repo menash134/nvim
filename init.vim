@@ -43,7 +43,7 @@ let g:python3_host_prog='/usr/bin/python3'
 let g:loaded_python_provider=0
 "ToggleTerm 
 let g:toggleterm_terminal_mapping = '<C-t>'
-let g:asyncrun_open=6
+let g:asyncrun_open=8
 let g:asyncrun_bell=1
 let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_lists = [
@@ -114,7 +114,6 @@ nnoremap <F9> :AsyncRun -mode=async -pos=right cc_checkout % <cr>
 nnoremap <leader>tu :AsyncRun -mode=async -pos=right cc_undo_co % <cr>
 nnoremap <leader>tc <cmd>ToggleTermCloseAll<cr>
 nnoremap <leader>to <cmd>ToggleTermOpenAll<cr>
-nnoremap <F10> :cclose<cr>
 
 "lua << EOF
 "local noremap_opts = { noremap = true, silent = true }
@@ -170,7 +169,7 @@ tnoremap <M-l> <c-\><c-n><c-w>l
 
 "cscope 
 map <leader>pt :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-map <leader>ps :vert scs find 0 <C-R>=expand("<cword>")<CR><CR>
+map <leader>ps :lcs find 0 <C-R>=expand("<cword>")<CR><CR>
 "nmap <leader>_ :scs find s <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>g :scs find g <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>c :scs find c <C-R>=expand("<cword>")<CR><CR>
@@ -302,6 +301,7 @@ nnoremap <C-p> :MarkdownPreview
 "Telescope
 " will find .lua file that exist at runtime
 " should be unique
+lua require("quickfix") 
 lua require("myterm") 
 lua require("bashbunni") 
 nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
@@ -310,5 +310,6 @@ nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
 "nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:source ~/.config/nvim/init.vim <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <leader>ff :Telescope find_files <cr>
+nnoremap <F10> :topleft Ctoggle<cr>
 
 "cscope add .cscope.out

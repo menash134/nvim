@@ -23,6 +23,8 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'kyoz/purify'
 
+"beacon
+Plug 'DanilaMihailov/beacon.nvim'
 
 "dirdiff
 Plug 'cossonleo/dirdiff.nvim'
@@ -38,6 +40,11 @@ Plug 'ahmedkhalf/lsp-rooter.nvim'
 
 "Startify
 Plug 'mhinz/vim-startify'
+
+
+"lsp
+Plug  'neovim/nvim-lspconfig'
+Plug  'hrsh7th/nvim-compe'
 
 "Autocomplete plugin
 "Also do :CocInstall coc-clangd coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-python coc-java 
@@ -110,6 +117,14 @@ Plug 'qalshidi/vim-bettergrep'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdtree'
+
+
+"quickfix list
+Plug 'kevinhwang91/nvim-bqf'
+"Plug 'seandewar/vim-qftoggle'
+Plug 'milkypostman/vim-togglelist'
+Plug 'junegunn/fzf',{ 'do': { -> fzf#install() } }
+
 
 
 call plug#end()

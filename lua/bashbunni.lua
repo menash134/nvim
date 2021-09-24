@@ -9,7 +9,7 @@ require('telescope').setup{
             ["<c-c>"] = require('telescope.actions').cycle_history_prev
           }        
       },
-      file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz"},
+      file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz","%.patch"},
       dynamic_preview_title =true,
       path_display = {['shorten'] = 6}
     }
