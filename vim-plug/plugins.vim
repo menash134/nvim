@@ -43,8 +43,9 @@ Plug 'mhinz/vim-startify'
 
 
 "lsp
-Plug  'neovim/nvim-lspconfig'
-Plug  'hrsh7th/nvim-compe'
+"Plug  'neovim/nvim-lspconfig'
+"Plug  'hrsh7th/nvim-compe'
+"Plug  'kabouzeid/nvim-lspinstall'
 
 "Autocomplete plugin
 "Also do :CocInstall coc-clangd coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-python coc-java 
@@ -121,8 +122,8 @@ Plug 'preservim/nerdtree'
 
 "quickfix list
 Plug 'kevinhwang91/nvim-bqf'
-"Plug 'seandewar/vim-qftoggle'
-Plug 'milkypostman/vim-togglelist'
+Plug 'seandewar/vim-qftoggle'
+"Plug 'milkypostman/vim-togglelist'
 Plug 'junegunn/fzf',{ 'do': { -> fzf#install() } }
 
 

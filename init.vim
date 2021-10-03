@@ -65,6 +65,12 @@ let g:startify_custom_header = [
 set encoding=UTF-8
 let mapleader = ";"
 
+lua <<EOF
+require('bqf').setup({
+auto_resize_height=false 
+})
+EOF
+
 "Navigate buffers
 "nnoremap <leader>bn :bnext<CR>
 nnoremap <s-Tab> :bnext<CR>
@@ -76,6 +82,7 @@ nnoremap <leader>bl :blast<CR>
 nnoremap <leader><CR> :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>fe :Telescope file_browser<CR>
 nnoremap <leader>fr :Telescope live_grep<CR>
+nnoremap <leader>fp :Telescope grep_string<CR>
 nnoremap <leader>f :call CocAction('format')<CR>
 
 "TagbarToggle
@@ -301,7 +308,7 @@ nnoremap <C-p> :MarkdownPreview
 "Telescope
 " will find .lua file that exist at runtime
 " should be unique
-lua require("quickfix") 
+"lua require("lsp") 
 lua require("myterm") 
 lua require("bashbunni") 
 nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
@@ -310,6 +317,6 @@ nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
 "nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:source ~/.config/nvim/init.vim <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <leader>ff :Telescope find_files <cr>
-nnoremap <F10> :topleft Ctoggle<cr>
+nnoremap <F10> :Ctoggle<cr>
 
 "cscope add .cscope.out
