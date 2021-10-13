@@ -119,6 +119,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdtree'
 
+"scrollview
+Plug 'dstein64/nvim-scrollview'
+Plug 'RRethy/vim-illuminate'
 
 "quickfix list
 Plug 'kevinhwang91/nvim-bqf'
