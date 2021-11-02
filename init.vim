@@ -177,6 +177,7 @@ tnoremap <M-l> <c-\><c-n><c-w>l
 "cscope 
 map <leader>pt :vert scs find t <C-R>=expand("<cword>")<CR><CR>
 map <leader>ps :lcs find 0 <C-R>=expand("<cword>")<CR><CR>
+map <leader>pe :lcs find c <C-R>=expand("<cword>")<CR><CR>
 "nmap <leader>_ :scs find s <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>g :scs find g <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>c :scs find c <C-R>=expand("<cword>")<CR><CR>
@@ -191,6 +192,7 @@ map <C-g> :Grep <C-R>=expand("<cword>")<CR><Space>
 "Telescope
 nnoremap <leader>fa <cmd>Telescope tags<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fc <cmd>Telescope frecency<cr>
 "nnoremap <leader>fg <cmd>lua require('telescope.builtin').tags()<cr>
 autocmd StdinReadPre * let s:std
 

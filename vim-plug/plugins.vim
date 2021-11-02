@@ -44,7 +44,7 @@ Plug 'mhinz/vim-startify'
 
 "lsp
 "Plug  'neovim/nvim-lspconfig'
-"Plug  'hrsh7th/nvim-compe'
+"Plug  'hrsh7th/nvim-cmp'
 "Plug  'kabouzeid/nvim-lspinstall'
 
 "Autocomplete plugin
@@ -109,6 +109,8 @@ Plug 'nvim-telescope/telescope.nvim'
 "Telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'fannheyward/telescope-coc.nvim'
+Plug 'nvim-telescope/telescope-frecency.nvim'
+Plug 'tami5/sqlite.lua'
 
 "grep 
 "Plug 'mhinz/vim-grepper'
@@ -120,7 +122,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdtree'
 
 "scrollview
-Plug 'dstein64/nvim-scrollview'
+"Plug 'dstein64/nvim-scrollview'
 Plug 'RRethy/vim-illuminate'
 
 "quickfix list

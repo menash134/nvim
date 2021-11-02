@@ -9,13 +9,29 @@ require('telescope').setup{
             ["<c-c>"] = require('telescope.actions').cycle_history_prev
           }        
       },
-      file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz","%.patch"},
+      file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz", "%.txt", "5.0"},
       dynamic_preview_title =true,
       path_display = {['shorten'] = 6}
     }
-  }
+}
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('coc')
+require('telescope').load_extension('frecency')
+
+require('telescope').setup{
+    extensions = {
+      frecency = {
+        db_root = "/home/adshas0/.config/nvim/db_root",
+        show_scores = false,
+        show_unindexed = true,
+        ignore_patterns = {"*.git/*", "*/tmp/*"},
+        disable_devicons = false,
+        workspaces = {
+          ["conf"]    = "/home/adshas0/.config",
+        }
+      }
+    }
+}
 
 local mappings = {
     
