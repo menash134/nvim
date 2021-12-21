@@ -107,7 +107,8 @@ nnoremap <leader>r :NERDTreeRefreshRoot<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 
 "print 
-nnoremap <leader>pp  oprintk("%s:%d\r\n",__func__,__LINE__);<ESC>:w!<CR>
+nnoremap <leader>pp  oprintk("%s:%d\r\n",__func__,__LINE__);/*ASHOK*/<ESC>:w!<CR>
+nnoremap <leader>pl  oprintf("%s:%d\r\n",__func__,__LINE__);fflush(stdout);/*ASHOK*/<ESC>:w!<CR>
 
 "ToggleTerm 
 "nnoremap <leader>tm <Cmd>exe v:count1 . "ToggleTerm"<CR>
