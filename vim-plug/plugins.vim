@@ -22,6 +22,7 @@ Plug 'gosukiwi/vim-atom-dark'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'kyoz/purify'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
 
 "beacon
 Plug 'DanilaMihailov/beacon.nvim'
