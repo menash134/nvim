@@ -98,7 +98,6 @@ map <F7> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 
 "MergeChange
 nnoremap <s-m>  <ESC>dp
-nnoremap <s-n>  <ESC>]c
 
 
 "NERDTree 
