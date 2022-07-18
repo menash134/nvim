@@ -131,6 +131,7 @@ Plug 'kevinhwang91/nvim-bqf'
 Plug 'seandewar/vim-qftoggle'
 "Plug 'milkypostman/vim-togglelist'
 Plug 'junegunn/fzf',{ 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 
