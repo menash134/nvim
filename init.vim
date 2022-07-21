@@ -19,6 +19,7 @@ set foldlevelstart=99
 set scrolloff=7
 set hidden
 set timeoutlen=500
+set relativenumber
 "set termguicolors
 "use y and p with the system clipboard
 set clipboard=unnamedplus
