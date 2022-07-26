@@ -19,7 +19,7 @@ set foldlevelstart=99
 set scrolloff=7
 set hidden
 set timeoutlen=500
-set relativenumber
+set relativenumber 
 "set termguicolors
 "use y and p with the system clipboard
 set clipboard=unnamedplus
@@ -33,6 +33,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
 colorscheme atom-dark-256
+"colorscheme tender
 set background=dark
 set grepprg=rg 
 

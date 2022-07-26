@@ -23,6 +23,12 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'kyoz/purify'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
+Plug 'jacoborus/tender.vim'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'Mofiqul/dracula.nvim'
 
 "beacon
 Plug 'DanilaMihailov/beacon.nvim'
@@ -42,6 +48,8 @@ Plug 'ahmedkhalf/lsp-rooter.nvim'
 "Startify
 Plug 'mhinz/vim-startify'
 
+"Autoclose
+Plug 'max-0406/autoclose.nvim'
 
 "lsp
 "Plug  'neovim/nvim-lspconfig'
