@@ -16,20 +16,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " dracula/dracula-theme, rakr/vim-one, gosukiwi/vim-atom-dark,
 " phanviet/vim-monokai-pro rhysd/vim-color-spring-night arzg/vim-colors-xcode
 " kyoz/purify
-Plug 'arzg/vim-colors-xcode'
-Plug 'rakr/vim-one'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'phanviet/vim-monokai-pro'
-Plug 'rhysd/vim-color-spring-night'
-Plug 'kyoz/purify'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
-Plug 'jacoborus/tender.vim'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'rebelot/kanagawa.nvim'
-Plug 'EdenEast/nightfox.nvim'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-Plug 'Mofiqul/dracula.nvim'
+""Plug 'arzg/vim-colors-xcode'
+""Plug 'rakr/vim-one'
+""Plug 'gosukiwi/vim-atom-dark'
+""Plug 'phanviet/vim-monokai-pro'
+""Plug 'rhysd/vim-color-spring-night'
+""Plug 'kyoz/purify'
+""Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
+""Plug 'jacoborus/tender.vim'
+""Plug 'rafi/awesome-vim-colorschemes'
+""Plug 'rebelot/kanagawa.nvim'
+""Plug 'EdenEast/nightfox.nvim'
+""Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+""Plug 'Mofiqul/dracula.nvim'
 
+Plug 'ellisonleao/gruvbox.nvim'
+""
 "beacon
 Plug 'DanilaMihailov/beacon.nvim'
 

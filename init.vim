@@ -32,9 +32,27 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
-colorscheme atom-dark-256
-"colorscheme tender
+"
+lua <<EOF
+require("gruvbox").setup({
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = true,
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  invert_intend_guides = false,
+  inverse = true, -- invert background for search, diffs, statuslines and errors
+  contrast = "", -- can be "hard", "soft" or empty string
+  overrides = {},
+})
+EOF
 set background=dark
+colorscheme gruvbox 
+"colorscheme atom-dark-256
+"colorscheme tender
 set grepprg=rg 
 
 "==============================================================================
