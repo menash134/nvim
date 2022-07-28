@@ -1,3 +1,7 @@
 # nvim
-nvim beginner developer for C language. loving nvim
+nvim beginner
+
+Programming just C language. 
+
+loving nvim
 
