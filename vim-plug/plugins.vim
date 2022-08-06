@@ -42,7 +42,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "Markdown preview
-""Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
 "root directory change
 Plug 'ahmedkhalf/lsp-rooter.nvim'
@@ -121,11 +121,12 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'fannheyward/telescope-coc.nvim'
 Plug 'nvim-telescope/telescope-frecency.nvim'
+Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 Plug 'tami5/sqlite.lua'
 
 "grep 
-"Plug 'mhinz/vim-grepper'
-Plug 'qalshidi/vim-bettergrep'
+""Plug 'mhinz/vim-grepper'
+""Plug 'qalshidi/vim-bettergrep'
 
 "devicons
 Plug 'kyazdani42/nvim-web-devicons'

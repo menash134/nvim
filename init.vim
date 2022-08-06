@@ -105,6 +105,7 @@ nnoremap <leader>fr :Telescope live_grep<CR>
 nnoremap <leader>fp :Telescope grep_string<CR>
 nnoremap <leader>ff :Telescope find_files <cr>
 nnoremap <leader>fo :Telescope oldfiles<cr>
+nnoremap <leader>fg :lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>
 nnoremap <leader>f :call CocAction('format')<CR>
 
 "Hop 
@@ -239,6 +240,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "Hop setup
 lua require("hop").setup()
+
 
 "Telescope
 " will find .lua file that exist at runtime

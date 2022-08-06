@@ -19,18 +19,34 @@ require('telescope').load_extension('coc')
 require('telescope').load_extension('frecency')
 
 require('telescope').setup{
-    extensions = {
-      frecency = {
-        db_root = "/home/adshas0/.config/nvim/db_root",
-        show_scores = false,
-        show_unindexed = true,
-        ignore_patterns = {"*.git/*", "*/tmp/*"},
-        disable_devicons = false,
-        workspaces = {
-          ["conf"]    = "/home/adshas0/.config",
+  extensions = {
+    frecency = {
+      db_root = "/home/adshas0/.config/nvim/db_root",
+      show_scores = false,
+      show_unindexed = true,
+      ignore_patterns = {"*.git/*", "*/tmp/*"},
+      disable_devicons = false,
+      workspaces = {
+        ["conf"]    = "/home/adshas0/.config",
+      }
+    }
+  }
+}
+
+local actions = require("telescope-live-grep-args.actions")
+require('telescope').setup{
+  extensions = {
+    live_grep_args = {
+      auto_quoting = true, -- enable/disable auto-quoting
+      mappings = {
+        i = {
+          ["<C-k>"] = actions.quote_prompt(),
+          ["<C-g>"] = actions.quote_prompt({ postfix = " -tc -g '*.{c}' " }),
+          ["<C-l>t"] = actions.quote_prompt({ postfix = ' -tc' }),
         }
       }
     }
+  }
 }
 
 local mappings = {
