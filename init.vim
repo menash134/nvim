@@ -105,7 +105,8 @@ nnoremap <leader>fr :Telescope live_grep<CR>
 nnoremap <leader>fp :Telescope grep_string<CR>
 nnoremap <leader>ff :Telescope find_files <cr>
 nnoremap <leader>fo :Telescope oldfiles<cr>
-nnoremap <leader>fg :lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>
+nnoremap <leader>fg :lua require('telescope').extensions.live_grep_args.live_grep_args({default_text=vim.fn.expand("<cword>")})<CR>
+nnoremap <leader>fd :lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>
 nnoremap <leader>f :call CocAction('format')<CR>
 
 "Hop 
