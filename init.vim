@@ -1,4 +1,5 @@
 "=================================================================================
+"
 "general
 "=================================================================================
 
@@ -33,24 +34,8 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
 "
-lua <<EOF
-require("gruvbox").setup({
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = true,
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
-  overrides = {},
-})
-EOF
 set background=dark
-colorscheme gruvbox 
+"colorscheme gruvbox
 "colorscheme atom-dark-256
 "colorscheme tender
 set grepprg=rg 
@@ -98,8 +83,18 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bf :bfirst<CR>
 nnoremap <leader>bl :blast<CR>
 
+
+"Coc nvim
+"highlight Pmenu  ctermbg=Black ctermfg=White
+highlight CocMenuSel guibg=Black guifg=Green
+highlight CocSearch  guifg=Magenta
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+"inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+"inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+"
+
 "Other
-nnoremap <leader><CR> :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>fe :Telescope file_browser<CR>
 nnoremap <leader>fr :Telescope live_grep<CR>
 nnoremap <leader>fp :Telescope grep_string<CR>
@@ -112,6 +107,10 @@ nnoremap <leader>f :call CocAction('format')<CR>
 "Hop 
 nnoremap <leader>gw :HopWord<cr>
 nnoremap <leader>gl :HopLine<cr>
+
+"Harpoon
+nnoremap <leader>mm :lua require("harpoon.mark").add_file()<CR>
+nnoremap <leader>ml :Telescope harpoon marks<CR>
 
 
 "TagbarToggle
@@ -236,11 +235,14 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 noremap ff :resize 100 <CR> <BAR> :vertical resize 220<CR>
 noremap fm <C-w>=
 
+
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "Hop setup
 lua require("hop").setup()
+" And then somewhere in your vimrc, to set the colorscheme
+lua require('colorbuddy').colorscheme('gruvbuddy')
 
 
 "Telescope
