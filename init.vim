@@ -35,7 +35,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 "Aesthetic
 "
 set background=dark
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme atom-dark-256
 "colorscheme tender
 set grepprg=rg 
@@ -83,11 +83,10 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bf :bfirst<CR>
 nnoremap <leader>bl :blast<CR>
 
-
 "Coc nvim
 "highlight Pmenu  ctermbg=Black ctermfg=White
-highlight CocMenuSel guibg=Black guifg=Green
-highlight CocSearch  guifg=Magenta
+highlight CocMenuSel ctermbg=Black ctermfg=Green guibg=Black guifg=Green
+highlight CocSearch  ctermfg=Magenta guifg=Magenta
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 "inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 "inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
@@ -136,6 +135,7 @@ nnoremap <leader>n :NERDTreeFind<CR>
 "print 
 nnoremap <leader>pp  oprintk("%s:%d\r\n",__func__,__LINE__);/*ASHOK*/<ESC>:w!<CR>
 nnoremap <leader>pl  oprintf("%s:%d\r\n",__func__,__LINE__);fflush(stdout);/*ASHOK*/<ESC>:w!<CR>
+
 
 "ToggleTerm 
 "nnoremap <leader>tm <Cmd>exe v:count1 . "ToggleTerm"<CR>
@@ -242,7 +242,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 "Hop setup
 lua require("hop").setup()
 " And then somewhere in your vimrc, to set the colorscheme
-lua require('colorbuddy').colorscheme('gruvbuddy')
+"lua require('colorbuddy').colorscheme('gruvbuddy')
+"highlight Normal cterm=NONE ctermbg=#282c34 gui=NONE guibg=#282c34
 
 
 "Telescope
