@@ -87,7 +87,7 @@ nnoremap <leader>bl :blast<CR>
 "highlight Pmenu  ctermbg=Black ctermfg=White
 highlight CocMenuSel ctermbg=Black ctermfg=Green guibg=Black guifg=Green
 highlight CocSearch  ctermfg=Magenta guifg=Magenta
-inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+inoremap <expr> <Right> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 "inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 "inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 "
