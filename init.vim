@@ -85,6 +85,7 @@ nnoremap <leader>bl :blast<CR>
 
 "Coc nvim
 "highlight Pmenu  ctermbg=Black ctermfg=White
+highlight Normal cterm=NONE ctermbg=Black gui=NONE guibg=Black 
 highlight CocMenuSel ctermbg=Black ctermfg=Green guibg=Black guifg=Green
 highlight CocSearch  ctermfg=Magenta guifg=Magenta
 inoremap <expr> <Right> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
@@ -146,7 +147,12 @@ nmap <F2>  :2ToggleTerm direction=window<CR>
 nmap <F3>  <esc><Cmd>exe v:count1 . "3ToggleTerm direction=vertical"<CR>
 nnoremap <F6> :AsyncRun -mode=async -pos=right cc_ax_compile<cr>
 nnoremap <F9> :AsyncRun -mode=async -pos=right cc_checkout % <cr>
-nnoremap <leader>tu :AsyncRun -mode=async -pos=right cc_undo_co % <cr>
+
+nnoremap <leader>ao :AsyncRun -mode=async -pos=right cc_checkout % <cr>
+nnoremap <leader>au :AsyncRun -mode=async -pos=right cc_undo_co % <cr>
+nnoremap <leader>ac :AsyncRun -mode=async -pos=right cc_ax_compile<cr>
+nnoremap <leader>al :AsyncRun -mode=async -pos=right cc_offload_compile<cr>
+
 nnoremap <leader>tc <cmd>ToggleTermCloseAll<cr>
 nnoremap <leader>to <cmd>ToggleTermOpenAll<cr>
 
@@ -243,7 +249,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 lua require("hop").setup()
 " And then somewhere in your vimrc, to set the colorscheme
 "lua require('colorbuddy').colorscheme('gruvbuddy')
-"highlight Normal cterm=NONE ctermbg=#282c34 gui=NONE guibg=#282c34
 
 
 "Telescope
