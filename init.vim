@@ -83,12 +83,13 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bf :bfirst<CR>
 nnoremap <leader>bl :blast<CR>
 
+
 "Coc nvim
 "highlight Pmenu  ctermbg=Black ctermfg=White
 highlight Normal cterm=NONE ctermbg=Black gui=NONE guibg=Black 
 highlight CocMenuSel ctermbg=Black ctermfg=Green guibg=Black guifg=Green
 highlight CocSearch  ctermfg=Magenta guifg=Magenta
-inoremap <expr> <Right> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 "inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 "inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 "
@@ -263,5 +264,6 @@ nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
 "nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:source ~/.config/nvim/init.vim <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
 nnoremap <F10> :Ctoggle<cr>
+nnoremap <s-c> :Ctoggle<cr>
 
 "cscope add .cscope.out
