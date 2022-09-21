@@ -1,5 +1,5 @@
 # nvim
-nvim beginner
+nvim -er
 
 Programming just C language. 
 
