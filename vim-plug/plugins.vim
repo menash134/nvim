@@ -32,30 +32,24 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'kdheepak/lazygit.nvim'
 
 
-"Plug 'ellisonleao/gruvbox.nvim'
-""
+"lualine is cool 
+Plug 'nvim-lualine/lualine.nvim'
+
 "beacon
 Plug 'DanilaMihailov/beacon.nvim'
 
 "dirdiff
 Plug 'cossonleo/dirdiff.nvim'
-"Airlinethemes
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
-"Markdown preview
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
 "root directory change
 Plug 'ahmedkhalf/lsp-rooter.nvim'
 
 "Startify
 Plug 'mhinz/vim-startify'
-
-"Autoclose
-Plug 'max-0406/autoclose.nvim'
 
 "lsp
 "Plug  'neovim/nvim-lspconfig'
@@ -65,6 +59,7 @@ Plug 'max-0406/autoclose.nvim'
 "Autocomplete plugin
 "Also do :CocInstall coc-clangd coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-python coc-java 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-pairs'
 
 "Language packs
 Plug 'sheerun/vim-polyglot'
@@ -142,7 +137,7 @@ Plug 'preservim/nerdtree'
 
 "scrollview
 "Plug 'dstein64/nvim-scrollview'
-Plug 'RRethy/vim-illuminate'
+"Plug 'RRethy/vim-illuminate'
 
 "quickfix list
 Plug 'kevinhwang91/nvim-bqf'

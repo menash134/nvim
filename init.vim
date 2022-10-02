@@ -29,7 +29,6 @@ set clipboard=unnamedplus
 "plugins
 "==================================================================================
 
-source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
@@ -43,7 +42,6 @@ set grepprg=rg
 "==============================================================================
 "key combos
 "==============================================================================
-
 let g:python3_host_prog='/usr/bin/python3'
 let g:loaded_python_provider=0
 "ToggleTerm 
@@ -60,6 +58,7 @@ let g:startify_lists = [
 
 
 
+
 let g:startify_custom_header = [
             \'   |  \/  | ___ _ __   __ _ ___| |__  |\  | |_   _(_)_ __ ___',
             \'   | |\/| |/ _ \  _ \ / _` / __|  _ \ | \ | \ \ / / |  _ ` _ \ ',
@@ -70,10 +69,9 @@ let g:startify_custom_header = [
 set encoding=UTF-8
 let mapleader = ";"
 
+
 lua <<EOF
-require('bqf').setup({
-auto_resize_height=false 
-})
+require('bqf').setup({auto_resize_height=false})
 EOF
 
 "Navigate buffers
@@ -85,14 +83,16 @@ nnoremap <leader>bl :blast<CR>
 
 
 "Coc nvim
-"highlight Pmenu  ctermbg=Black ctermfg=White
-highlight Normal cterm=NONE ctermbg=Black gui=NONE guibg=Black 
+""highlight Pmenu  ctermbg=Black ctermfg=White
+highlight Normal cterm=NONE ctermbg=Black gui=NONE guibg=Black
 highlight CocMenuSel ctermbg=Black ctermfg=Green guibg=Black guifg=Green
 highlight CocSearch  ctermfg=Magenta guifg=Magenta
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
 "inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 "inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
-"
+
+
 
 "Other
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<CR>
@@ -104,6 +104,8 @@ nnoremap <leader>fo :Telescope oldfiles<cr>
 nnoremap <leader>fg :lua require('telescope').extensions.live_grep_args.live_grep_args({default_text=vim.fn.expand("<cword>")})<CR>
 nnoremap <leader>fd :lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>
 nnoremap <leader>f :call CocAction('format')<CR>
+nnoremap <leader>fz <cmd>:lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+nnoremap <leader>fy <cmd>:lua require('telescope.builtin').current_buffer_fuzzy_find({default_text=vim.fn.expand("<cword>")})<cr>
 
 "Hop 
 nnoremap <leader>gw :HopWord<cr>
@@ -243,8 +245,8 @@ noremap ff :resize 100 <CR> <BAR> :vertical resize 220<CR>
 noremap fm <C-w>=
 
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight') 
 
 "Hop setup
 lua require("hop").setup()
@@ -252,10 +254,12 @@ lua require("hop").setup()
 "lua require('colorbuddy').colorscheme('gruvbuddy')
 
 
+
 "Telescope
 " will find .lua file that exist at runtime
 " should be unique
 "lua require("lsp") 
+lua require("sline") 
 lua require("myterm") 
 lua require("bashbunni") 
 nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>

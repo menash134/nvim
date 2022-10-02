@@ -18,6 +18,7 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension('coc')
 require("telescope").load_extension('harpoon')
 require('telescope').load_extension('frecency')
+require('telescope').load_extension('lazygit')
 
 require('telescope').setup{
   extensions = {
@@ -54,7 +55,7 @@ local mappings = {
     
 }
 mappings.curr_buf = function() 
-  local opt = require('telescope.themes').get_dropdown({height=10, previewer=false})
+  local opt = require('telescope.themes').get_dropdown({height=20, previewer=true})
   require('telescope.builtin').current_buffer_fuzzy_find(opt)
   print("teej")
 end
