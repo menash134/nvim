@@ -9,10 +9,10 @@ require('lualine').setup{
     theme = 'dracula'
   },
   sections = {
-    lualine_c = {'filename', tagname},
+    lualine_c = {{'filename', color = { fg = '#97ed79'}}, {tagname, color = { fg = '#ed79e8', gui='italic' }} },
   },
   inactive_sections = {
-    lualine_c = {'filename', tagname},
+    lualine_c = {{'filename', color = { fg = '#97ed79'}}, {tagname, color = { fg = '#ed79e8', gui='italic' }} },
   },
 }
 
