@@ -44,12 +44,16 @@ Plug 'DanilaMihailov/beacon.nvim'
 "dirdiff
 Plug 'cossonleo/dirdiff.nvim'
 
+Plug 'dhananjaylatkar/cscope_maps.nvim'
 
 "root directory change
 Plug 'ahmedkhalf/lsp-rooter.nvim'
 
 "Startify
 Plug 'mhinz/vim-startify'
+
+Plug 'smiteshp/nvim-navic'
+Plug 'utilyre/barbecue.nvim'
 
 "lsp
 "Plug  'neovim/nvim-lspconfig'
@@ -77,11 +81,19 @@ Plug 'skywind3000/asyncrun.vim'
 "Nvim motions
 Plug 'phaazon/hop.nvim'
 
+Plug 'ludovicchabant/vim-gutentags'
+
+"markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 "cscope 
 "Plug 'mfulz/cscope.nvim'
+"
+"winbar
+Plug 'fgheng/winbar.nvim'
 
 "Comment Plugin
-Plug 'preservim/nerdcommenter'
+"Plug 'preservim/nerdcommenter'
 
 "Class/module browser
 Plug 'preservim/tagbar'

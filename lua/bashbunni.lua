@@ -9,7 +9,7 @@ require('telescope').setup{
             ["<c-c>"] = require('telescope.actions').cycle_history_prev
           }        
       },
-      file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz", "%.txt", "5.0"},
+      file_ignore_patterns= { "%.tags","./tags","%.pdf","%.tar","%.zip","%.tgz", "%.txt", "5.0", "%.keep", "MSPS", "msps_oss"},
       dynamic_preview_title =true,
       path_display = {['shorten'] = 6}
     }
@@ -17,7 +17,7 @@ require('telescope').setup{
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('coc')
 require("telescope").load_extension('harpoon')
-require('telescope').load_extension('frecency')
+--require('telescope').load_extension('frecency')
 require('telescope').load_extension('lazygit')
 
 require('telescope').setup{

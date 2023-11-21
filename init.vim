@@ -33,12 +33,14 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 "set tags=/home/adshas0/views/adshas0_ax_view_1/wlan2/tags
 "Aesthetic
 "
+
+let g:current_working_directory = expand('%:p:h')
 set background=dark
 colorscheme gruvbox
 "colorscheme atom-dark-256
 "colorscheme tender
 set grepprg=rg 
-
+set tags=tags
 "==============================================================================
 "key combos
 "==============================================================================
@@ -72,7 +74,19 @@ let mapleader = ";"
 
 lua <<EOF
 require('bqf').setup({auto_resize_height=false})
+require("cscope_maps").setup({
+ disable_maps = false, -- true disables my keymaps, only :Cscope will be loaded
+  cscope = {
+      db_file = ".cscope.out", -- location of cscope db file
+      exec = "cscope", -- "cscope" or "gtags-cscope"
+      use_telescope = true, -- true will show results in telescope picker
+      picker = "telescope",
+      skip_picker_for_single_result = false,
+      db_build_cmd_args = { "-bqkv",  "-i", "./.cscope.files" }, -- args used for db build (:Cscope build)
+  },
+})
 EOF
+
 
 "Navigate buffers
 "nnoremap <leader>bn :bnext<CR>
@@ -81,6 +95,14 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bf :bfirst<CR>
 nnoremap <leader>bl :blast<CR>
 
+
+"Enable Gutentags
+let g:gutentags_project_root = ['.copyarea.dat']
+let g:gutentags_enabled = 1
+let g:gutentags_ctags_executable = '$HOME/bin/ctags' 
+let g:gutentags_filetypes = ['c', 'h', 'cpp', 'py']
+let g:gutentags_generate_on_write = 1
+let g:gutentags_ctags_extra_args = ['--extra=+f']
 
 "Coc nvim
 ""highlight Pmenu  ctermbg=Black ctermfg=White
@@ -91,7 +113,6 @@ inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 
 "inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 "inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
-
 
 
 "Other
@@ -153,6 +174,7 @@ nnoremap <F9> :AsyncRun -mode=async -pos=right cc_checkout % <cr>
 
 nnoremap <leader>ao :AsyncRun -mode=async -pos=right cc_checkout % <cr>
 nnoremap <leader>au :AsyncRun -mode=async -pos=right cc_undo_co % <cr>
+nnoremap <leader>ak :AsyncRun -mode=async -pos=right cc_undo_co_keep % <cr>
 nnoremap <leader>ac :AsyncRun -mode=async -pos=right cc_ax_compile<cr>
 nnoremap <leader>al :AsyncRun -mode=async -pos=right cc_offload_compile<cr>
 
@@ -225,7 +247,7 @@ map <leader>pe :lcs find c <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-o>a :scs find a <C-R>=expand("<cword>")<CR><CR>
 "
-map <C-g> :Grep <C-R>=expand("<cword>")<CR><Space> 
+""map <C-g> :Grep <C-R>=expand("<cword>")<CR><Space> 
 "Telescope
 nnoremap <leader>fa <cmd>Telescope tags<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -250,23 +272,26 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "Hop setup
 lua require("hop").setup()
+
 " And then somewhere in your vimrc, to set the colorscheme
 "lua require('colorbuddy').colorscheme('gruvbuddy')
 
+call mkdp#util#install()
 
-
+lua require("barbecue").setup({symbols ={separator = "/",},kinds=false,})
 "Telescope
 " will find .lua file that exist at runtime
 " should be unique
 "lua require("lsp") 
 lua require("sline") 
+lua require("barwin") 
 lua require("myterm") 
 lua require("bashbunni") 
 nnoremap <C-_> <cmd>lua require("bashbunni").curr_buf() <cr>
 " nnoremap <C-_> :Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top <cr> 
 " nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending", prompt_position="top"})<cr>
 "nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:source ~/.config/nvim/init.vim <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
-nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:set tags=.tags<cr>:cscope add .cscope.out<cr>
+nnoremap <F4> :lua package.loaded.bashbunni = nil <cr>:set tags=tags<cr>
 nnoremap <F10> :Ctoggle<cr>
 nnoremap <s-c> :Ctoggle<cr>
 
